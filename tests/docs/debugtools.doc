@@ -1,0 +1,14 @@
+# 1. UI mode (best for local development)
+npx playwright test --ui
+
+# 2. See what the browser shows
+npx playwright test tests/login.spec.ts --headed
+
+# 3. Step through line by line
+npx playwright test tests/login.spec.ts --debug
+
+# 4. Record everything (video, screenshots, network)
+npx playwright test tests/login.spec.ts --trace on
+
+# 5. Replay a recorded trace
+npx playwright show-trace test-results/.../trace.zip

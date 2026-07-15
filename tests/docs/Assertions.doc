@@ -1,0 +1,17 @@
+// Page-level
+await expect(page).toHaveURL(/inventory/);
+await expect(page).toHaveTitle("Swag Labs");
+
+// Element visibility
+await expect(page.getByText("Products")).toBeVisible();
+await expect(page.getByText("Error")).not.toBeVisible();
+
+// Text content
+await expect(page.locator(".shopping_cart_badge")).toHaveText("1");
+await expect(page.getByTestId("error")).toContainText("Username is required");
+
+// Element state
+await expect(page.getByRole("button", { name: "Login" })).toBeEnabled();
+
+// Count
+await expect(page.locator(".inventory_item")).toHaveCount(6);

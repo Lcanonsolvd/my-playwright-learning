@@ -1,0 +1,21 @@
+Actions cheat sheet
+typescript
+// Navigation
+await page.goto("/");                // uses baseURL from config
+await page.goBack();
+await page.reload();
+
+// Clicking
+await page.getByRole("button", { name: "Login" }).click();
+await page.getByText("Sauce Labs Backpack").click();
+
+// Typing
+await page.getByPlaceholder("Username").fill("standard_user");
+await page.getByPlaceholder("Password").fill("secret_sauce");
+
+// Keyboard
+await page.keyboard.press("Enter");
+
+// Waiting (only when auto-wait is not enough)
+await page.waitForURL("**/inventory.html");
+await page.locator(".spinner").waitFor({ state: "hidden" });

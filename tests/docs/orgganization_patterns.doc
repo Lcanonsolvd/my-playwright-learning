@@ -1,0 +1,7 @@
+Test organization patterns
+Pattern	When to use
+test.describe("group")	Group related tests for the same feature
+test.beforeEach	Setup that runs before every test (e.g., navigate to page)
+test.afterEach	Cleanup after every test
+test.skip("reason")	Temporarily skip a test (better than commenting out)
+test.only("name")	Run ONLY this test (for debugging — remove before committing!)
