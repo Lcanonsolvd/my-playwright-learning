@@ -13,7 +13,8 @@ test('has title', async ({ page }) => { // this is a key  it is the standart des
   await expect(page).toHaveTitle(/Swag Labs/);
 });
 
-/*test('get started link', async ({ page }) => {
+/*
+test('get started link', async ({ page }) => {
   await page.goto('https://www.saucedemo.com');
 
   // Click the get started link.
@@ -21,4 +22,5 @@ test('has title', async ({ page }) => { // this is a key  it is the standart des
 
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-/});
+});
+*/
